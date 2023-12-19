@@ -25,6 +25,5 @@ jobs:
           if [ -f /home/runner/work/TestingQA/TestingQA/UAS/1-2/requirements.txt ]; then pip install -r /home/runner/work/TestingQA/TestingQA/UAS/1-2/requirements.txt; fi
       - name: Test with pytest
         run: |
-          export PYTHONPATH=/home/runner/work/TestingQA/TestingQA/UAS/1-2/src
           pytest
-          pytest --cov=api /home/runner/work/TestingQA/TestingQA/UAS/1-2/test/
+          pytest --cov
