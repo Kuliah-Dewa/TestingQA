@@ -1,0 +1,26 @@
+name: Build
+on:
+  pull_request:
+    branches:
+      - main
+  push:
+    branches:
+      - main
+jobs:
+  test:
+    name: Build for PR only
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v4
+        with:
+          cache: pip
+          python-version: 3.9
+      - name: Install requirements
+        run: pip install -r requirements.txt
+      - name: Test with pytest
+        run: |
+          pytest
+          pytest --cov
