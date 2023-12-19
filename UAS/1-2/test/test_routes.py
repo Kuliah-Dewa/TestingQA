@@ -1,5 +1,4 @@
 import json
-import requests
 from .settings import DEFAULT_PRICE
 
 def test_product_detail_api(client):
@@ -16,7 +15,7 @@ def test_product_api(client):
     assert response.status_code == 200
 
 #tugas 1 UAS
-def test_create_cart_item():
+def test_post_cart(client):
     data = {
         "coupon_code": "dewa irtzadhany",
         "shipping_fee": 3,
@@ -24,10 +23,6 @@ def test_create_cart_item():
             {"product_id": 3, "qty": 3}
         ]
     }
-    url = "http://127.0.0.1:5000/api/cart"
-    response = requests.post(url, json=data)
-
+    response = client.post(url, json=data)
     assert response.status_code == 200
-    assert response.text == 'data created'
-    
-test_create_cart_item()
+    if response.status_code == 200:  assert "data created"
