@@ -27,4 +27,4 @@ jobs:
         run: |
           export PYTHONPATH=/home/runner/work/TestingQA/TestingQA/UAS/1-2/src
           pytest
-          pytest --cov=api /home/runne/work/TestingQA/TestingQA/UAS/1-2/test/
+          pytest --cov=api /home/runner/work/TestingQA/TestingQA/UAS/1-2/test/
