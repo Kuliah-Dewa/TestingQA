@@ -16,6 +16,7 @@ def test_product_api(client):
 
 #tugas 1 UAS
 def test_post_cart(client):
+    url = f"/api/cart"
     data = {
         "coupon_code": "dewa irtzadhany",
         "shipping_fee": 3,
