@@ -11,3 +11,4 @@ https://github.com/Kuliah-Dewa/TestingQA/blob/c1497d30516aa1deda8f824a56663d313b
 https://github.com/Kuliah-Dewa/TestingQA/actions/workflows/build.yml
 
 ## Basic-Automation - Tugas UAS 3
+https://github.com/Kuliah-Dewa/TestingQA/blob/main/UAS/3/project-demo/test-suite-1.robot
